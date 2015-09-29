@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F44A85BE-1131-4A09-803A-B0FC16FAC7A6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Caculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E879AF85B01D5AAE1427D12E31E458CAB7A3C64A</key>
+		<string>https://github.com/kesongxie/iOS-8-Apps-with-Swift-Stanford-CS193p</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Caculator/Caculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E879AF85B01D5AAE1427D12E31E458CAB7A3C64A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kesongxie/iOS-8-Apps-with-Swift-Stanford-CS193p</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E879AF85B01D5AAE1427D12E31E458CAB7A3C64A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E879AF85B01D5AAE1427D12E31E458CAB7A3C64A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Swift%20IOS%20Stanford%20CS193P</string>
+		</dict>
+	</array>
+</dict>
+</plist>

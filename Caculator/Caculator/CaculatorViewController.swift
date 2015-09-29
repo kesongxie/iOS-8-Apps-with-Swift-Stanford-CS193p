@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-   
+class CaculatorViewController: UIViewController {
     //when copy elements in the storyboard, we will copy the properties or actions as well
     
-    @IBOutlet weak var display: UILabel! // pointer, optional, automatic unwrap, then we need a exclamation mark in the decolaration, good for some kind of properties getting set ver early, and would stay forever, implicitly unwrap
+   @IBOutlet weak var display: UILabel! // pointer, optional, automatic unwrap, then we need a exclamation mark in the decolaration, good for some kind of properties getting set ver early, and would stay forever, implicitly unwrap
     var userInTheMiddleOfTying = false
     var constantExpresson = false
     var brain = CalculatorBrain()
@@ -144,6 +142,29 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    // Your view controller overrides this method when it needs to pass relevant data to the new view controller(the controller which is about to be displayed).
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var destination = segue.destinationViewController as? UIViewController
+        if let nav = destination as? UINavigationController{
+            destination = nav.visibleViewController
+        }
+        if let gvc = destination as? GraphViewController{
+            if let identifier = segue.identifier{
+                
+                switch identifier{
+                    case "graph":
+                        gvc.brain = brain
+                        var expression = split(brain.description){$0 == ","}
+                        gvc.title = expression.last
+                    default:break
+                }
+            }
+        }
+    }
+    
+    
+
     
 }
 

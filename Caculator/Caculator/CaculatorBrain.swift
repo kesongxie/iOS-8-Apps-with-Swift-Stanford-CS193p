@@ -34,6 +34,31 @@ class CalculatorBrain:Printable{
             return outPut
         }
     }
+    
+    
+    typealias propertyList = AnyObject
+    var program:propertyList{ //guarantee to be a property list
+        get{
+            return opStack.map{$0.description}
+        }
+        set{
+            if let opSymbols = newValue as? Array<String>{
+                var newOpStack = [Op]()
+                //interpret the property list and uses it
+                for opSymbol in opSymbols{
+                    if let operation = knownOps[opSymbol]{
+                        newOpStack.append(operation)
+                    }else if let operand = NSNumberFormatter().numberFromString(opSymbol)?.doubleValue{
+                        newOpStack.append(Op.Operand(operand))
+                    }
+                }
+                opStack = newOpStack
+            }
+        }
+    }
+    
+    
+    
    
     private enum Op:Printable{
         case Operand(Double) //Pass a associative value to the enum case
@@ -254,6 +279,7 @@ class CalculatorBrain:Printable{
     }
     
     func evaluate() -> Double?{
+        println(description)
         let (result, remainder) = evaluate(opStack)
         return result
     }
@@ -276,7 +302,9 @@ class CalculatorBrain:Printable{
     }
     
     func popOp(){
-         opStack.removeLast()
+        if !opStack.isEmpty{
+            opStack.removeLast()
+        }
     }
     
     
